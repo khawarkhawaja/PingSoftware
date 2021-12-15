@@ -12,44 +12,60 @@ package PingSoftware.PingSoftware;
  * @author pc
  */
 public class PingResult {
-    private int responseCode;
-    private boolean isOK;
-    private long pingTime;
-    private String message;
+   private int icmp;
+   private double pingTime;
+   private String ICMPEchoPacket;
+   private String address;
+   private boolean ping;
+   
+   public PingResult()
+   {
+	   icmp=-1;
+	   pingTime=-1;
+	   ICMPEchoPacket="Not Ping";
+	   address="0.0.0.0";
+	   ping=false;
+   }
+   
+public boolean isPing() {
+	return ping;
+}
 
-    public void setPingTime(long pingTime) {
-        this.pingTime = pingTime;
-    }
+public void setPing(boolean ping) {
+	this.ping = ping;
+}
 
-    public String getMessage() {
-        return message;
-    }
+public String getAddress() {
+	return address;
+}
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+public void setAddress(String address) {
+	this.address = address;
+}
 
-    public long getPingTime() {
-        return pingTime;
-    }
+public String getICMPEchoPacket() {
+	return ICMPEchoPacket;
+}
 
+public void setICMPEchoPacket(String iCMPEchoPacket) {
+	ICMPEchoPacket = iCMPEchoPacket;
+}
 
-
-    public int getResponseCode() {
-        return responseCode;
-    }
-
-    public void setResponseCode(int responseCode) {
-        this.responseCode = responseCode;
-    }
-
-    public boolean isIsOK() {
-        return isOK;
-    }
-
-    public void setIsOK(boolean isOK) {
-        this.isOK = isOK;
-    }
+public int getIcmp() {
+	return icmp;
+}
+public void setIcmp(int icmp) {
+	this.icmp = icmp;
+}
+public double getPingTime() {
+	return pingTime;
+}
+public void setPingTime(double pingTime) {
+	this.pingTime = pingTime;
+}
+   
+   
+   
     
     
 }
